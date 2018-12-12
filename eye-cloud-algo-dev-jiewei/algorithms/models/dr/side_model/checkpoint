@@ -1,0 +1,2 @@
+model_checkpoint_path: "eyes_model-49"
+all_model_checkpoint_paths: "eyes_model-49"

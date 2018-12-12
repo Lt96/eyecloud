@@ -1,0 +1,65 @@
+{
+  "lesion": {
+    "exu": {
+      "prefix": "exu",
+      "model_path": "./algorithms/models/exu/model",
+      "output_dir": "./algorithms/global/lesion/result/",
+      "plot_dir": "./algorithms/global/lesion/plot/",
+      "pos_idx": 0,
+      "threshold": 0.90,
+      "win_size": 250,
+      "win_ov": 50,
+      "precise": false,
+      "sub_win": 100,
+      "sub_ov": 0
+    },
+    "hem": {
+      "prefix": "hem",
+      "model_path": "./algorithms/models/hem/model",
+      "output_dir": "./algorithms/global/lesion/result/",
+      "plot_dir": "./algorithms/global/lesion/plot/",
+      "pos_idx": 0,
+      "threshold": 0.90,
+      "win_size": 250,
+      "win_ov": 50,
+      "precise": false,
+      "sub_win": 100,
+      "sub_ov": 0
+    }
+  },
+  "macular": {
+    "path_od_pb": "./algorithms/models/macular/frozen_graph_od.pb",
+    "path_fovea_pb": "./models/algorithms/macular/frozen_graph_fovea.pb",
+    "path_to_images_output": "./algorithms/global/macular/result/",
+    "width": 64,
+    "height": 64
+  },
+  "vessel": {
+    "model_architecture_path": "./algorithms/models/vessel/InceptionUNet_v2_architecture.json",
+    "model_weight_path": "./algorithms/models/vessel/InceptionUNet_v2_best_weights.h5",
+    "model_name": "InceptionUNet_v2",
+    "dataset_name": "vessel",
+    "save_path": "./algorithms/global/vessel/result/",
+    "patch_height": 96,
+    "patch_width": 96,
+    "stride_height": 10,
+    "stride_width": 10,
+    "seg_num": 1
+  },
+  "dr": {
+    "model_path": "./algorithms/models/dr/Pmodel.pb",
+    "side_model_path": "./algorithms/models/dr/side_model",
+    "input_width": 331,
+    "input_height": 331,
+    "input_depth": 3,
+    "input_mean": 128,
+    "input_std": 128,
+    "resized_input_tensor_name": "input:0",
+    "final_result_name": "final_result:0"
+  },
+  "global": {
+    "default_output_path": "./algorithms/result.pdf",
+    "database_path": "./algorithms/global/",
+    "temp_file_dir": "./algorithms/temp/"
+  }
+}
