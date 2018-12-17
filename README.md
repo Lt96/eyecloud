@@ -5,3 +5,6 @@ https://www.cnblogs.com/zuidongfeng/p/8032505.html
 
 
 #安装py3    https://www.cnblogs.com/kimyeee/p/7250560.html
+
+
+#Cache entry deserialization failed, entry ignored   未解决
