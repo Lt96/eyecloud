@@ -40,3 +40,13 @@ https://www.cnblogs.com/zuidongfeng/p/8032505.html
  1100  export C_FORCE_ROOT="True"  #ROOT启动
  1101  celery worker -A tasks.celery_config -l info -c 2
 
+
+#修改commit 以及安装celery
+ 1130  vim routes/commit.py 
+ 1138  python3 -m pip celery=3.1.24
+ 1139  python3 -m pip install celery=3.1.24
+ 1140  python3 -m pip install celery==3.1.24
+ 1141  python3 -m pip install -U pip
+ 1142  python3 -m pip install celery==3.1.24
+
+#python3 -m pip install          与      pip3 isntall 有区别
