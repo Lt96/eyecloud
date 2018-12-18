@@ -26,3 +26,11 @@ https://www.cnblogs.com/zuidongfeng/p/8032505.html
 #python3 -m pip install          与      pip3 isntall 有区别
 
 #检查注释的部分
+
+#算法服务器防火墙开启5000端口，物理机开启33333端口 （记得重启防火墙）
+
+#修改数据库连接方式换成物理机:33333
+
+#tornado。server添加listen adress=0.0.0.0
+
+#算法.py import json
