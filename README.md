@@ -5,6 +5,7 @@ https://www.cnblogs.com/zuidongfeng/p/8032505.html
 
 
 #安装py3    https://www.cnblogs.com/kimyeee/p/7250560.html
+#zipimport.ZipImportError: can't decompress data   solution：https://blog.csdn.net/u014749862/article/details/54430022/
 
 
 #Cache entry deserialization failed, entry ignored   未解决
