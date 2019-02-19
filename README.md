@@ -40,5 +40,8 @@ https://www.cnblogs.com/zuidongfeng/p/8032505.html
 #export C_FORCE_ROOT="true"
 
 #nohup celery worker -A tasks.celery_config -l info -c 2  1>/home/data/yuanz/celery/outputlog 2>/home/data/yuanz/celery/errlog &
+#服务器2为 /root/
 
 #nohup python3 tornado_server.py --port=5000 --log_file_prefix=./logs/5000.log --log_rotate_mode=time --log_rotate_when=H #--log_rotate_interval=1  1>/home/data/yuanz/tornado/outputlog 2>/home/data/yuanz/tornado/errlog &
+#服务器2为 /root/
+
