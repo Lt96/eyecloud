@@ -48,3 +48,16 @@ https://www.cnblogs.com/zuidongfeng/p/8032505.html
 #nohup python3 tornado_server.py --port=5000 --log_file_prefix=./logs/5000.log --log_rotate_mode=time --log_rotate_when=H #--log_rotate_interval=1  1>/home/data/yuanz/tornado/outputlog 2>/home/data/yuanz/tornado/errlog &
 #服务器2为 /root/
 
+
+####
+#python3 -m pip install -U sklearn
+ 1016  python3 -m pip install -U pip
+ 1017  python3 -m pip install -U sklearn
+ 1018  celery worker -A tasks.celery_config -l info -c 1
+ 1019  export JOBLIB_MULTIPROCESSING=0
+ 1020  $JOBLIB_MULTIPROCESSING
+ 1021  celery worker -A tasks.celery_config -l info -c 1
+ 1022  python3 -m pip install -U tqdm
+ 1023  celery worker -A tasks.celery_config -l info -c 1
+ 1024  history
+###
