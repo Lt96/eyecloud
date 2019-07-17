@@ -397,7 +397,7 @@ class MainUi(QtWidgets.QMainWindow):
 
         self.right_layout.addWidget(self.right_bar_widget_id_input, 3, 0, 1, 9)  # 输入栏
 
-        self.open_icon = QCheckBox('打开文件 (DR诊断目前仅限于50DX散瞳照)', self)  # 单选按钮
+        self.open_icon = QCheckBox('打开文件 ', self)  # 单选按钮
         # self.open_icon = QtWidgets.QLabel(chr(0xf115) + ' ' + '打开文件  ')
         # self.open_icon.setFont(qtawesome.font('fa', 14))
         # self.open_icon.setFont(QFont("Microsoft YaHei"))
@@ -450,7 +450,7 @@ class MainUi(QtWidgets.QMainWindow):
         self.rb.setToolTip("可选择是否进行血管分析")
         self.right_layout.addWidget(self.rb, 7, 0, 1, 2)
 
-        self.rb1 = QCheckBox('DR诊断', self)
+        self.rb1 = QCheckBox('DR诊断（必选）', self)
         # self.rb1.setFont(qtawesome.font('fa', 14))
 
         self.rb1.setToolTip("默认进行DR诊断")
@@ -538,26 +538,69 @@ class MainUi(QtWidgets.QMainWindow):
         )
 
 
-        self.photochoose = QComboBox(self, minimumWidth=200)
-        infomation = ["topcon", "我要开始学习了"]
+        self.photochoose = QComboBox(self)
+        infomation = ["拓普康", "我要开始学习了"]
         self.photochoose.addItems(infomation)
 
 
 
         self.right_layout.addWidget(self.photochoose, 9, 0, 1, 2)
+
+
         self.photochoose.setStyleSheet(
             '''
-            QComboBox{font-family:Microsoft YaHei;border:1px solid black;border-radius:5px;background: white;font:13px;color:black;height: 20px;}
-　　QComboBox:editable{background:black;}
-　　QComboBox QAbstractItemView{border: 0px;outline:0px;selection-background-color: blue;height:100px;background: rgb(1,58,80);color:white;font-size:12px}
-　　QComboBox QAbstractItemView::item {height:30px;}
-　　QComboBox QAbstractItemView::item:selected{background-color: blue;}
-　　QComboBox::down-arrow{image:url(application/resources/icons/combo_arrow.png);}
-　　QComboBox::drop-down{border:0px;}
-
-            '''
-
+            QComboBox {
+    
+                    border:1px solid black;
+                    font-family:"Microsoft YaHei";
+                                
+                    font-size: 12px;
+                
+                
+                    border-radius:8px;
+                
+                
+                    padding:1px 18px 1px 3px;
+                
+                    min-width:100px;
+                }
+   
+                
+                QComboBox::drop-down {
+                    subcontrol-origin: padding;
+                
+                    subcontrol-position: top right;
+                
+                
+                    width: 25px;
+                
+                
+                    border-left-width: 1px;
+                    border-left-color: black;
+                    border-left-style: solid;
+                
+                    border-top-right-radius: 3px;
+                    border-bottom-right-radius: 3px;
+                }
+                
+                
+                QComboBox::down-arrow {
+                    border-image: url(./res/drop4.png);
+                }
+                
+                
+                
+                
+                QComboBox QAbstractItemView {
+                    border: 1px solid darkgray;
+                    selection-background-color: #177CB0;
+                }
+                
+                            '''
         )
+
+
+
 
 
 
@@ -757,17 +800,17 @@ QCheckBox::indicator:checked:pressed {
     width: 40px;
     height: 20px;
     } QCheckBox::indicator:unchecked {
-    image: url(./res/true.png);
+    image: url(./res/on1);
 
     }
     } QCheckBox::indicator:unchecked:pressed {
-    image: url(./res/true.png);
+    image: url(./res/on1);
 
     } 
     QCheckBox::indicator:checked{
-    image: url(./res/true.png);}
+    image: url(./res/on1);}
     QCheckBox::indicator:checked:pressed {
-    image: url(./res/true.png);}
+    image: url(./res/on1);}
 
 
             ''')
